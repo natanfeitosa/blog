@@ -2,7 +2,7 @@
 
 > Este é um projeto próprio de testes pra fins de estudos e ensino
 
-# Parte 1
+# [Parte 1](https://devnatan.blogspot.com/2021/01/construindo-um-blog-com-django-parte-1.html)
 
 Olá pessoas, devs novos e experientes. Este é meu primeiro post aqui, não sei como vou me sair, mas espero que gostem e consiga somar mais no nosso aprendizado.
 
@@ -72,3 +72,17 @@ Continuando o [post anterior](https://devnatan.blogspot.com/2021/01/construindo-
 Nosso blogue será composto por uma página ```home```, uma com post inteiro, página de pesquisa com filtros de tags e categorias, estas serão as "classificações" de nossos post, e sem esquecer a página de login e cadastro também.
 
 Já decidido quais páginas queremos, vamos partir pro código.
+
+Primeiro criaremos nosso ```index.html``` em ```blog/frontend``` então a árvore da nossa pasta ```blog``` ficará a seguinte: 
+![imagem que você só vai ver no blog](../blog_pics/arvore_primeiro_momento.png)
+
+Em nosso ```index.html``` vamos colar [o snippet do Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/#starter-template). Deixaremos apenas a primeira ```tag <script>```, removeremos as outras duas abaixo.
+
+Caso não queira desenvolver rodando servidor, recomendo o [plugin Live Server](https://ritwickdey.github.io/vscode-live-server/) para VSCode, mas você também pode [rodar um servidor de testes local usando Python](https://developer.mozilla.org/pt-BR/docs/Learn/Common_questions/Como_configurar_um_servidor_de_testes_local#executando_um_servidor_http_local_simples), para isso basta rodar ```python -m SimpleHTTPServer``` ou  ```python3 -m http.server``` dentro de ```blog/frontend```.
+
+Agora vamos de fato pro código.
+
+Vamos começar criando nosso querido e precioso header.
+
+Logo abaixo do início da tag ```<body>``` vamos adicionar a ```<header>``` e dentro adicionaremos [este snippet](https://getbootstrap.com/docs/5.0/components/navbar/#supported-content), agora vamos tirar o trecho ```<a class="navbar-brand" href="#">Navbar</a>``` e também a tag ```<form>```, ficando assim
+<script src="https://gist.github.com/natanfeitosa/a9daf1666b6890a72e0792ea9fed694c.js"></script>
